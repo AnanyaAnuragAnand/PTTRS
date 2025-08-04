@@ -1,4 +1,6 @@
 import streamlit as st, filterDF, mysql.connector as mc, networkx as nx, community.community_louvain as cl, pandas as pd, numpy as np, math as mt, joblib, os
+import pymysql
+pymysql.install_as_MySQLdb()
 from pyvis.network import Network
 from scipy.sparse import csr_matrix, vstack
 from rdkit import Chem
@@ -1947,3 +1949,4 @@ def other():
                                 st.components.v1.html(html_data,height=800)
                     else: pass
                 st.markdown("----")
+
